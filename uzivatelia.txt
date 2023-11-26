@@ -1,0 +1,6 @@
+Monika,heslo,false,false,2
+David,heslo,false,false,2
+Jan,heslo,true,false,1
+Kamil,heslo,true,false,1
+Erik,heslo,true,false,2
+Lisa,Benett,true,false,4

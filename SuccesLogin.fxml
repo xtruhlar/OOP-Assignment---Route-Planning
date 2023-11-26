@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MAIN.SuccesLogin">
+   <children>
+      <GridPane prefHeight="350.0" prefWidth="500.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="165.39999237060547" minHeight="10.0" prefHeight="47.79999389648438" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="214.1999897003174" minHeight="10.0" prefHeight="134.39999999999998" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" maxHeight="140.19998779296873" minHeight="10.0" prefHeight="139.39999999999998" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="250.0" text="TatrasPlaner" textAlignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="22.5" />
+               </GridPane.margin>
+               <font>
+                  <Font name="MV Boli" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="userProfile" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="80.0" GridPane.columnIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="65.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@Sample_User_Icon.png" />
+               </image>
+            </ImageView>
+            <Button alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onMouseClicked="#logout" text="Odhlásiť" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="160.0" />
+               </GridPane.margin>
+            </Button>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Začiatok" GridPane.rowIndex="1">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="80.0" left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Koniec" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="80.0" left="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@image-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="jedlo" mnemonicParsing="false" text="Občerstvenie" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" top="80.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="vodopad" mnemonicParsing="false" text="Vodopád" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="140.0" top="80.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="zlanovanie" mnemonicParsing="false" text="Zlaňovanie" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" top="80.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="vlek" mnemonicParsing="false" text="Vlek" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="140.0" top="80.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <Button fx:id="vyhladat" defaultButton="true" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#handleVyhladatButtonAcrion" prefWidth="100.0" text="Vyhľadať" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="75.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="SansSerif Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="output" prefHeight="115.0" prefWidth="200.0" GridPane.rowIndex="2" onMouseClicked="#logout">
+               <GridPane.margin>
+                  <Insets bottom="25.0" left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <ChoiceBox fx:id="startP" prefHeight="30.0" prefWidth="176.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="37.0" />
+               </GridPane.margin>
+               <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Smokovec" />
+                  <String fx:value="Hrebienok" />
+                  <String fx:value="StrbskePleso" />
+                  <String fx:value="ChataPodSoliskom" />
+                  <String fx:value="ZbojnickaChata" />
+                  <String fx:value="ZamkovskehoChata" />
+                  <String fx:value="RainerovaChata" />
+                  <String fx:value="TeryhoChata" />
+                  <String fx:value="TatranskaLomnica" />
+                  <String fx:value="SliezskyDom" />
+                  <String fx:value="TatranskaPolianka" />
+                  <String fx:value="PredneSolisko" />
+                  <String fx:value="PopradskePleso" />
+                  <String fx:value="HincovoPleso" />
+                  <String fx:value="BatizovskePleso" />
+                  <String fx:value="RazcestiePodSlavkovskymStitom" />
+                  <String fx:value="SlavkovskyStit" />
+                  <String fx:value="A" />
+                  <String fx:value="B" />
+                  <String fx:value="C" />
+                  <String fx:value="D" />
+                  <String fx:value="E" />
+               </FXCollections>
+            </items>
+            </ChoiceBox>
+            <ChoiceBox fx:id="cielP" prefHeight="30.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="37.0" />
+               </GridPane.margin>
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Smokovec" />
+                     <String fx:value="Hrebienok" />
+                     <String fx:value="StrbskePleso" />
+                     <String fx:value="ChataPodSoliskom" />
+                     <String fx:value="ZbojnickaChata" />
+                     <String fx:value="ZamkovskehoChata" />
+                     <String fx:value="RainerovaChata" />
+                     <String fx:value="TeryhoChata" />
+                     <String fx:value="TatranskaLomnica" />
+                     <String fx:value="SliezskyDom" />
+                     <String fx:value="TatranskaPolianka" />
+                     <String fx:value="PredneSolisko" />
+                     <String fx:value="PopradskePleso" />
+                     <String fx:value="HincovoPleso" />
+                     <String fx:value="BatizovskePleso" />
+                     <String fx:value="RazcestiePodSlavkovskymStitom" />
+                     <String fx:value="SlavkovskyStit" />
+                     <String fx:value="A" />
+                     <String fx:value="B" />
+                     <String fx:value="C" />
+                     <String fx:value="D" />
+                     <String fx:value="E" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
